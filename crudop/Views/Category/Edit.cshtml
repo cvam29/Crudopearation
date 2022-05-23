@@ -1,0 +1,28 @@
+﻿@model Category
+<form method="post" asp-action="Edit">
+    <table>
+        <tr>
+            <td>
+            <label asp-for="name"></label>
+            </td>
+            <td>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </td>
+        </tr>
+         <tr>
+            <td>
+            <label asp-for="Displayorder"></label>
+            </td>
+            <td>
+                <input asp-for="Displayorder" class="form-control" />
+                <span asp-validation-for="Displayorder" class="text-danger"></span>
+
+            </td>
+            <td>
+                <button type="submit">Update</button>
+                <a asp-controller="Category" asp-action="Index">Back to List</a>
+            </td>
+        </tr>
+    </table>
+</form>
